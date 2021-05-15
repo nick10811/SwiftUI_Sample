@@ -11,16 +11,19 @@ struct ContentView: View {
     var modelArray: [Model] = []
     
     var body: some View {
-        List(modelArray) { item in
-            Image(item.imageName)
-                .cornerRadius(40)
-                .padding(.all, 5)
-            VStack(alignment: .leading) {
-                Text(item.title)
-                Text(item.subtitle)
-                    .font(.subheadline)
-                    .foregroundColor(Color.gray)
+        NavigationView {
+            List(modelArray) { item in
+                Image(item.imageName)
+                    .cornerRadius(40)
+                    .padding(.all, 5)
+                VStack(alignment: .leading) {
+                    Text(item.title)
+                    Text(item.subtitle)
+                        .font(.subheadline)
+                        .foregroundColor(Color.gray)
+                }
             }
+            .navigationBarTitle("List View")
         }
     }
 }
