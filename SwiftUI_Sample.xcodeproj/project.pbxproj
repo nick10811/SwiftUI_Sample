@@ -13,6 +13,7 @@
 		947DD752264FA67B00BE9786 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 947DD751264FA67B00BE9786 /* Assets.xcassets */; };
 		947DD755264FA67B00BE9786 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 947DD754264FA67B00BE9786 /* Preview Assets.xcassets */; };
 		947DD758264FA67B00BE9786 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947DD756264FA67B00BE9786 /* LaunchScreen.storyboard */; };
+		947DD760264FBE5A00BE9786 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947DD75F264FBE5A00BE9786 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		947DD754264FA67B00BE9786 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		947DD757264FA67B00BE9786 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		947DD759264FA67B00BE9786 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		947DD75F264FBE5A00BE9786 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				947DD74B264FA67B00BE9786 /* AppDelegate.swift */,
 				947DD74D264FA67B00BE9786 /* SceneDelegate.swift */,
 				947DD74F264FA67B00BE9786 /* ContentView.swift */,
+				947DD75F264FBE5A00BE9786 /* Model.swift */,
 				947DD751264FA67B00BE9786 /* Assets.xcassets */,
 				947DD756264FA67B00BE9786 /* LaunchScreen.storyboard */,
 				947DD759264FA67B00BE9786 /* Info.plist */,
@@ -148,6 +151,7 @@
 				947DD74C264FA67B00BE9786 /* AppDelegate.swift in Sources */,
 				947DD74E264FA67B00BE9786 /* SceneDelegate.swift in Sources */,
 				947DD750264FA67B00BE9786 /* ContentView.swift in Sources */,
+				947DD760264FBE5A00BE9786 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

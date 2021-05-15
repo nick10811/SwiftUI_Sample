@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    var modelArray: [Model] = []
+    
     var body: some View {
-        List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
-            Image(systemName: "photo")
+        List(modelArray) { item in
+            Image(systemName: item.url)
             VStack(alignment: .leading) {
-                Text("first text")
-                Text("second text (subtitle)")
+                Text(item.title)
+                Text(item.subtitle)
                     .font(.subheadline)
                     .foregroundColor(Color.gray)
             }
@@ -21,8 +23,10 @@ struct ContentView: View {
     }
 }
 
+#if DEBUG
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(modelArray: offlineData)
     }
 }
+#endif
