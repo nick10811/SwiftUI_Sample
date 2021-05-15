@@ -9,9 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Text("first text")
-            Text("second text")
+        HStack {
+            Image(systemName: "photo")
+            VStack {
+                Text("first text")
+                Text("second text")
+            }
         }
     }
 }
