@@ -12,7 +12,9 @@ struct ContentView: View {
     
     var body: some View {
         List(modelArray) { item in
-            Image(systemName: item.url)
+            Image(item.imageName)
+                .cornerRadius(40)
+                .padding(.all, 5)
             VStack(alignment: .leading) {
                 Text(item.title)
                 Text(item.subtitle)
