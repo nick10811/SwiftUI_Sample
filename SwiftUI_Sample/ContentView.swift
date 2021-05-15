@@ -11,9 +11,11 @@ struct ContentView: View {
     var body: some View {
         HStack {
             Image(systemName: "photo")
-            VStack {
+            VStack(alignment: .leading) {
                 Text("first text")
-                Text("second text")
+                Text("second text (subtitle)")
+                    .font(.subheadline)
+                    .foregroundColor(Color.gray)
             }
         }
     }
