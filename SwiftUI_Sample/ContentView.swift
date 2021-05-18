@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    var modelArray: [Model] = []
+    @State var modelArray: [Model] = []
     
     var body: some View {
         NavigationView {
@@ -24,7 +24,36 @@ struct ContentView: View {
                 }
             }
             .navigationBarTitle("List View")
+            .onAppear(perform: {
+                loadData()
+            })
         }
+    }
+    
+    func loadData() {
+        let opendata = "https://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=cec4308e-3876-46a8-8372-171fd611dfa3"
+        guard let url = URL(string: opendata) else { return }
+
+        let request = URLRequest(url: url)
+        print("[API] start.")
+        URLSession.shared.dataTask(with: request) {data, response, error in
+            print("[API] response.")
+            if let data = data {
+                do {
+                    let response = try JSONDecoder().decode(Welcome.self, from: data)
+                    var parkArray: [Model] = []
+                    response.result.results.forEach { element in
+                        parkArray.append(Model(imageName: "head", title: element.公園名稱, subtitle: element.管理單位.rawValue))
+                    }
+                    DispatchQueue.main.async {
+                        self.modelArray = parkArray
+                    }
+                } catch {
+                    print("[API] Parsing json failed. \(error)")
+                }
+            }
+        }.resume()
+        
     }
 }
 
